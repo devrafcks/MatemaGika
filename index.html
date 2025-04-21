@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MatemaGika - equações e interpolação</title>
+  <title>MatemaGika - Equações e Interpolação</title>
 
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="./imgs/favicon/apple-touch-icon.png">
@@ -23,7 +23,7 @@
   <div class="container">
     <!-- Cabeçalho -->
     <header>
-      <img src="./imgs/logo.png" alt="logo">
+      <img src="./imgs/logo.png" alt="Logo MatemaGika">
       <ul>
         <li><a href="#Sobre"><i class="fas fa-info-circle"></i> Sobre</a></li>
         <li><a href="#equacoes"><i class="fas fa-square-root-variable"></i> Equação</a></li>
@@ -36,7 +36,7 @@
       <h2><i class="fas fa-magic"></i> Sobre o MatemaGika</h2>
     
       <p>
-        O <strong>MatemaGika</strong> é um projeto desenvolvido para tornar a <strong>matemática computacional</strong> mais acessível e interativa, utilizando tecnologias como <strong>JavaScript, HTML e CSS</strong>. Através de uma interface simples e colorida, o site permite ao usuário visualizar gráficos, resolver equações e aplicar conceitos matemáticos com mais clareza.
+        O <strong>MatemaGika</strong> é um projeto desenvolvido para tornar a <strong>matemática computacional</strong> mais acessível e interativa, utilizando tecnologias como <code>JavaScript, HTML e CSS</code>. Através de uma interface simples e colorida, o site permite ao usuário visualizar gráficos, resolver equações e aplicar conceitos matemáticos com mais clareza.
       </p>
     
       <p>
@@ -44,7 +44,7 @@
       </p>
     
       <p>
-        O MatemaGika surgiu como parte de um trabalho escolar e tem como objetivo principal <strong>ensinar conceitos fundamentais de forma prática</strong>. Entre os tópicos abordados estão: resolução de equações de 1º e 2º grau, interpolação linear usando geração de gráficos por meio da biblioteca <code>Chart.js</code>.
+        O MatemaGika surgiu como parte de um trabalho escolar e tem como objetivo principal <strong>ensinar conceitos fundamentais de forma prática</strong>. Entre os tópicos abordados estão: resolução de equações de 1º e 2º grau, interpolação linear e geração de gráficos por meio da biblioteca <code>Chart.js</code>.
       </p>
     
       <h2 style="text-align: center; margin-top: 40px;"><i class="fas fa-users"></i> Idealizadores</h2>
@@ -59,17 +59,15 @@
           <p>Rafael H.</p>
         </div>
         <div class="profile-item">
-          <img src="img3.jpg" alt="Maria">
+          <img src="./imgs/icons/maria.png" alt="Maria">
           <p>Maria M.</p>
         </div>
         <div class="profile-item">
-          <img src="img4.jpg" alt="Ana">
+          <img src="./imgs/icons/ana.png" alt="Ana">
           <p>Ana Q.</p>
         </div>
       </div>
     </section>
-    
-    
 
     <!-- Equações -->
     <section id="equacoes">
@@ -86,10 +84,10 @@
         <img src="./imgs/equação.png" alt="Equações no plano cartesiano" class="image-side">
       </div>
     </section>
-    <section class="input-group">
 
+    <section class="input-group">
       <p>Insira os coeficientes da equação <strong>ax² + bx + c = 0</strong> para calcular suas raízes.</p>
-      <p><strong>Dica:</strong> Se quiser resolver uma equação do 1º grau, basta deixar o coeficiente <code>a</code> igual a 0 ou sem nada.</p>
+      <p><strong>Dica:</strong> Se quiser resolver uma equação do 1º grau, basta deixar o coeficiente <code>a</code> igual a 0 ou vazio.</p>
       <p><strong>Exemplo:</strong> Para resolver a equação 2x² + 4x - 6 = 0, digite: a = 2, b = 4, c = -6.</p>
       <div>
         <label for="a">Coeficiente a:</label>
@@ -124,11 +122,10 @@
     </section>
     
     <section id="interpolacao" class="input-group">
-
       <p>Informe pares de pontos no formato <strong>x,y</strong>, separados por espaços.</p>
-      <p><strong>Dica:</strong> Digite pelo menos dois pontos para que a interpolação seja feita corretamente.</p>
+      <p><strong>Dica:</strong> Digite pelo menos dois pontos para que a interpolação funcione corretamente.</p>
       <p><strong>Exemplo:</strong> Para os pontos (1,2), (3,4) e (5,6), digite: <code>1,2 3,4 5,6</code></p>
-      <p>O gráfico será gerado logo abaixo com base nos pontos informados.</p>
+      <p>O gráfico será gerado abaixo com base nos pontos informados.</p>
       <input type="text" id="pontos" placeholder="Digite os pontos aqui" />
       <button onclick="interpolar()"><i class="fas fa-play"></i> Calcular Interpolação</button>
       <div id="resultadoInterpolacao" class="resultado-container" style="display: none;"></div>
@@ -154,7 +151,7 @@
     </footer>
   </div>
 
-  <!-- Scripts -->
+  <!-- Script -->
   <script src="script.js"></script>
 </body>
 </html>
