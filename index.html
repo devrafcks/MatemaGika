@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Matemagika - equações e interpolação</title>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./imgs/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./imgs/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./imgs/favicon/favicon-16x16.png">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css"/>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Cabeçalho -->
+    <header>
+      <img src="./imgs/logo.png" alt="logo">
+      <ul>
+        <li><a href="#Sobre"><i class="fas fa-info-circle"></i> Sobre</a></li>
+        <li><a href="#equacao"><i class="fas fa-square-root-variable"></i> Equação</a></li>
+        <li><a href="#interpolacao"><i class="fas fa-chart-line"></i> Interpolação</a></li>
+      </ul>
+    </header>
+
+    <!-- Seção Sobre -->
+    <section id="Sobre">
+      <h2><i class="fas fa-magic"></i> Sobre o MatemaGika</h2>
+      <p>Este projeto tem como objetivo demonstrar conceitos de matemática computacional utilizando JavaScript, HTML e CSS de forma interativa.</p>
+
+      <div class="icons-profile">
+        <div class="profile-item">
+          <img src="./imgs/icons/vitor.png" alt="Vitor">
+          <p>Vitor A.</p>
+        </div>
+        <div class="profile-item">
+          <img src="./imgs/icons/rafael.png" alt="Rafael">
+          <p>Rafael H.</p>
+        </div>
+        <div class="profile-item">
+        <img src="img3.jpg" alt="Maria">
+          <p>Maria M.</p>
+        </div>
+        <div class="profile-item">
+          <img src="img4.jpg" alt="Ana">
+          <p>Ana Q.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Equações -->
+    <section id="equacao" class="input-group">
+      <h2><i class="fas fa-calculator"></i> Resolução de Equações (1º e 2º Grau)</h2>
+      <p>Insira os coeficientes da equação <strong>ax² + bx + c = 0</strong> para calcular suas raízes.</p>
+      <p><strong>Dica:</strong> Se quiser resolver uma equação do 1º grau, basta deixar o coeficiente <code>a</code> igual a 0 ou sem nada.</p>
+      <p><strong>Exemplo:</strong> Para resolver a equação 2x² + 4x - 6 = 0, digite: a = 2, b = 4, c = -6.</p>
+      <div>
+        <label for="a">Coeficiente a:</label>
+        <input type="number" id="a" placeholder="a" step="any" />
+        
+        <label for="b">Coeficiente b:</label>
+        <input type="number" id="b" placeholder="b" step="any" />
+        
+        <label for="c">Coeficiente c:</label>
+        <input type="number" id="c" placeholder="c" step="any" />
+      </div>
+      <button onclick="resolverEquacao()"><i class="fas fa-play"></i> Calcular Raízes</button>
+      <div id="resultadoEquacao" class="resultado-container" style="display: none;"></div>
+    </section>
+
+    <hr />
+
+    <!-- Interpolação -->
+    <section id="interpolacao" class="input-group">
+      <h2><i class="fas fa-chart-line"></i> Interpolação Linear</h2>
+      <p>Informe pares de pontos no formato <strong>x,y</strong>, separados por espaços.</p>
+      <p><strong>Dica:</strong> Digite pelo menos dois pontos para que a interpolação seja feita corretamente.</p>
+      <p><strong>Exemplo:</strong> Para os pontos (1,2), (3,4) e (5,6), digite: <code>1,2 3,4 5,6</code></p>
+      <p>O gráfico será gerado logo abaixo com base nos pontos informados.</p>
+      <input type="text" id="pontos" placeholder="Digite os pontos aqui" />
+      <button onclick="interpolar()"><i class="fas fa-play"></i> Calcular Interpolação</button>
+      <div id="resultadoInterpolacao" class="resultado-container" style="display: none;"></div>
+      <div class="chart-container">
+        <canvas id="graficoInterpolacao"></canvas>
+      </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p>Feito por <i class="fas fa-user-astronaut"></i> DevRafcks</p>
+        <div class="footer-icons">
+          <a href="https://github.com/devrafcks" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github fa-2x"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/rafael-henrique-blanco-0455b12a6/" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin fa-2x"></i>
+          </a>
+          <p class="copy"><i class="far fa-copyright"></i> 2025 MatemaGika. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
