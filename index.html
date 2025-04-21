@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Matemagika - equações e interpolação</title>
+  <title>MatemaGika - equações e interpolação</title>
 
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="./imgs/favicon/apple-touch-icon.png">
@@ -26,7 +26,7 @@
       <img src="./imgs/logo.png" alt="logo">
       <ul>
         <li><a href="#Sobre"><i class="fas fa-info-circle"></i> Sobre</a></li>
-        <li><a href="#equacao"><i class="fas fa-square-root-variable"></i> Equação</a></li>
+        <li><a href="#equacoes"><i class="fas fa-square-root-variable"></i> Equação</a></li>
         <li><a href="#interpolacao"><i class="fas fa-chart-line"></i> Interpolação</a></li>
       </ul>
     </header>
@@ -34,8 +34,21 @@
     <!-- Seção Sobre -->
     <section id="Sobre">
       <h2><i class="fas fa-magic"></i> Sobre o MatemaGika</h2>
-      <p>Este projeto tem como objetivo demonstrar conceitos de matemática computacional utilizando JavaScript, HTML e CSS de forma interativa.</p>
-
+    
+      <p>
+        O <strong>MatemaGika</strong> é um projeto desenvolvido para tornar a <strong>matemática computacional</strong> mais acessível e interativa, utilizando tecnologias como <strong>JavaScript, HTML e CSS</strong>. Através de uma interface simples e colorida, o site permite ao usuário visualizar gráficos, resolver equações e aplicar conceitos matemáticos com mais clareza.
+      </p>
+    
+      <p>
+        A <strong>matemática computacional</strong> é uma área que une matemática com ciência da computação, buscando resolver problemas através de algoritmos e programação. Ela é usada, por exemplo, para criar simulações, analisar dados, prever comportamentos e visualizar funções matemáticas com maior precisão.
+      </p>
+    
+      <p>
+        O MatemaGika surgiu como parte de um trabalho escolar e tem como objetivo principal <strong>ensinar conceitos fundamentais de forma prática</strong>. Entre os tópicos abordados estão: resolução de equações de 1º e 2º grau, interpolação linear usando geração de gráficos por meio da biblioteca <code>Chart.js</code>.
+      </p>
+    
+      <h2 style="text-align: center; margin-top: 40px;"><i class="fas fa-users"></i> Idealizadores</h2>
+    
       <div class="icons-profile">
         <div class="profile-item">
           <img src="./imgs/icons/vitor.png" alt="Vitor">
@@ -46,7 +59,7 @@
           <p>Rafael H.</p>
         </div>
         <div class="profile-item">
-        <img src="img3.jpg" alt="Maria">
+          <img src="img3.jpg" alt="Maria">
           <p>Maria M.</p>
         </div>
         <div class="profile-item">
@@ -55,10 +68,26 @@
         </div>
       </div>
     </section>
+    
+    
 
     <!-- Equações -->
-    <section id="equacao" class="input-group">
+    <section id="equacoes">
       <h2><i class="fas fa-calculator"></i> Resolução de Equações (1º e 2º Grau)</h2>
+      <div class="flex-section">
+        <div class="text-content">
+          <p>
+            Uma <strong>equação do 1º grau</strong> é uma expressão matemática que envolve incógnitas elevadas apenas à potência 1, como <em>ax + b = 0</em>. Já a <strong>equação do 2º grau</strong> envolve incógnitas elevadas à potência 2, como <em>ax² + bx + c = 0</em>.
+          </p>
+          <p>
+            A solução dessas equações permite encontrar os valores de <strong>x</strong> que satisfazem a igualdade. No caso do 2º grau, o gráfico da função forma uma parábola no plano cartesiano.
+          </p>
+        </div>
+        <img src="./imgs/equação.png" alt="Equações no plano cartesiano" class="image-side">
+      </div>
+    </section>
+    <section class="input-group">
+
       <p>Insira os coeficientes da equação <strong>ax² + bx + c = 0</strong> para calcular suas raízes.</p>
       <p><strong>Dica:</strong> Se quiser resolver uma equação do 1º grau, basta deixar o coeficiente <code>a</code> igual a 0 ou sem nada.</p>
       <p><strong>Exemplo:</strong> Para resolver a equação 2x² + 4x - 6 = 0, digite: a = 2, b = 4, c = -6.</p>
@@ -79,8 +108,23 @@
     <hr />
 
     <!-- Interpolação -->
-    <section id="interpolacao" class="input-group">
+    <section id="conceito-interpolacao">
       <h2><i class="fas fa-chart-line"></i> Interpolação Linear</h2>
+      <div class="flex-section">
+        <div class="text-content">
+          <p>
+            A <strong>interpolação linear</strong> é uma técnica utilizada para estimar valores entre dois pontos conhecidos. A ideia é traçar uma linha reta entre os pontos e usar essa linha para prever valores intermediários.
+          </p>
+          <p>
+            Essa técnica é muito útil em matemática computacional, pois permite aproximar resultados com base em dados discretos.
+          </p>
+        </div>
+        <img src="./imgs/interpolação.png" alt="Gráfico explicativo da interpolação" class="image-side">
+      </div>
+    </section>
+    
+    <section id="interpolacao" class="input-group">
+
       <p>Informe pares de pontos no formato <strong>x,y</strong>, separados por espaços.</p>
       <p><strong>Dica:</strong> Digite pelo menos dois pontos para que a interpolação seja feita corretamente.</p>
       <p><strong>Exemplo:</strong> Para os pontos (1,2), (3,4) e (5,6), digite: <code>1,2 3,4 5,6</code></p>
